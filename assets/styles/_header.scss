@@ -1,0 +1,40 @@
+.pageheader {
+  background-color: $green;
+  color:$white;
+}
+
+.pageheader__title {
+  text-transform: uppercase;
+  width: 80%;
+  font-size: 2em;
+  z-index:1;
+  position: relative;
+  text-shadow:0 0 3px $green;
+  margin:1.25em 0;
+}
+
+.pageheader__figure {
+  position: absolute;
+  right:0;
+  bottom:0;
+  margin:0;
+  padding:0;
+  width:21em;
+  overflow: hidden;
+  z-index: 0;
+  img {
+    display: block;
+  }
+  @include bp($s1) {
+    width: 23em;
+  }
+  @include bp($s2) {
+    right:2em;
+  }
+  @include bp($s3) {
+    right:3em;
+  }
+  @include bp($s4) {
+    right:4em;
+  }
+}

@@ -1,0 +1,61 @@
+.cwrap {
+  @include clearfix();
+  padding:2em 0;
+}
+.cleft {
+  @include clearfix();
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+  @include bp($s1) {
+    padding-right: .5em;
+    float:left;
+    width:66.666%;
+  }
+  @include bp($s2) {
+    padding-right: 1em;
+  }
+}
+
+.cright {
+  @include clearfix();
+  margin-top: 2em;
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
+  @include bp($s1) {
+    padding-left: .5em;
+    margin-top: 0;
+    float:right;
+    width:33.333%;
+  }
+  @include bp($s2) {
+    padding-left: 1em;
+  } 
+
+}
+
+.cill {
+  margin:0 auto;
+  max-width: 22em;
+  padding:0;
+  border-radius: .5em;
+  text-align: center;
+  & + & {
+    margin-top: 1em;
+  }
+
+  img {
+    border-radius: .5em;
+  }
+  @include bp($s1) {
+    max-width: none;
+  }
+}

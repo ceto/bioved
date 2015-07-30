@@ -1,0 +1,51 @@
+.pagefooter {
+  padding:3em 0 6em;
+  text-align: center;
+
+}
+
+.pagefooter__data {
+  margin:0;
+  padding:0;
+  color:$gray;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: .875em;
+  a {
+    font-weight: 500;
+    color:$white;
+    &:hover, &:focus {
+      color:$graylight;
+    }
+  }
+}
+
+
+.pagefooter__copy {
+  font-size: .75em;
+  margin:1.25em 0 0;
+  font-weight: 500;
+  color:$gray;
+}
+.pagefooter__tothetop {
+	font-weight: 300;
+	display: inline-block;
+	position: relative;
+	padding-top: .5em;
+	&:before {
+		position: absolute;
+		top:-1.2em;
+		left:0;
+		right: 0;
+		content:'〈';
+		transform:rotate(90deg);
+	}
+	&:after {
+		position: absolute;
+		top:-1em;
+		left:0;
+		right: 0;
+		content:'〈';
+		transform:rotate(90deg);
+	}
+}

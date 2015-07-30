@@ -1,0 +1,42 @@
+.product {
+  border-top: 1px solid $graymixed;
+  margin:2em 0 3em;
+
+  @include bp($s4) {
+    font-size: 1.25em;
+  }
+}
+
+.product__title {
+  margin:0;
+  font-size: 2em;
+}
+
+
+
+.product__dark {
+  @include clearfix();
+  background-color: $graymixed;
+  border-radius: .5em;
+  padding:1.5em 1em;
+  margin:2em 0;
+  @include bp($s1) {
+    padding:1.5em 1.5em;
+  }
+  @include bp($s3) {
+  }
+}
+
+
+
+.product__subtitle {
+  display: inline-block;
+  padding:.5em 1em;
+  margin: 0;
+  border: 1px solid currentColor;
+  transform: translateY(-1.75em);
+
+  + * {
+    margin-top: -1em;
+  }
+}

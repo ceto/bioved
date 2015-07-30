@@ -1,0 +1,56 @@
+.aboutus {
+  margin-top: 6em;
+  padding:0 0 5em;
+
+}
+
+.aboutus__content {
+  position: relative;
+  z-index: 1;
+  @include bp($s2) {
+    font-size: 1.333em;
+  }
+
+  h1 {
+    margin:-.333em 0 2em;
+    padding:.333em 1em;
+    font-size: 2em;
+    line-height: 1;
+
+    display: inline-block;
+    border:1px solid currentColor;
+  }
+}
+
+.aboutus__ill {
+  position: absolute;
+  right:-5em;
+  top:-3em;
+  margin:0;
+  padding:0;
+  width:12em;
+  overflow: hidden;
+  z-index: 0;
+  img {
+    display: block;
+  }
+  @include bp($s1) {
+    width:25%;
+    right:1em;
+  }
+  @include bp($s2) {
+    right:2em;
+    width:22%;
+  }
+  @include bp($s3) {
+    right:12em;
+    top:-3em;
+  }
+  @include bp($s4) {
+    right:8em;
+    top:-3.25em;
+  }
+  @include bp($s5) {
+    top:-3.25em;
+  }
+}

@@ -1,0 +1,318 @@
+.nav-toggle {
+	position: absolute;
+	right:.75em;
+	top:2em;
+	display: inline-block;
+	font-weight: 900;
+	font-size: 1.5em;
+	line-height: 1;
+	cursor: pointer;
+	float:right;
+	&:hover, &:focus {
+		//box-shadow:inset 0 0 0 1px $cyan;
+		//color:$cyan-dark;
+	}
+
+	i {
+		font-size: 1.875em;
+	}
+
+	@include bp($s2) {
+		display: none;
+	}
+
+}
+
+input[type="checkbox"]#navtoggle {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+
+  &:checked + .navbar {
+  	height: 100%;
+		visibility:visible;
+		opacity:1;
+	}
+}
+
+/* header */
+.navbar { 
+	background-color: #fff;
+	z-index: 10;
+
+	@include bp($s2) {
+
+		&.fixedhead {
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      height:3.875em;
+      //top:-65px;
+      //background-color: #fff;
+      //height:65px;
+      transition:top 0.6s ease;
+      &.show {
+        top:0;
+      }
+    }
+	}
+
+	.wrapper {
+		padding-top: 2em;
+		padding-bottom: 2em;
+	}
+}
+
+.navbar__brand {
+	@include hide-text();
+	background-image: url('../images/logo.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: auto 100%;
+	display: inline-block;
+	width:12.5em;
+	height:5.5em;
+	@include bp($s2){
+		float:left;
+	}
+}
+
+.navbar__nav {
+
+}
+
+/* ul */
+.nav--main {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	
+	text-align: center;
+	transition: height .5s .5s, padding .5s;
+	height: 0;
+	overflow: hidden;
+
+	input[type="checkbox"]#navtoggle:checked + .navbar__nav & {
+		height: auto;
+		padding:1em 0 2em 0;
+		@include bp($s2){
+			padding:0;
+		}
+	}
+
+	@include bp($s2){
+		transform:none;
+		height: auto;
+		margin:2.333em 0;
+		padding:0;
+		float:right;
+		text-align:right;
+	}
+
+
+	li {
+		display: block;
+		margin:1em 0;
+		font-size: 1.125em;
+		line-height: 1;
+		font-weight: 900;
+
+		@include bp($s2){
+			display: inline-block;
+			margin:0;
+			margin-left:.5em;
+			font-size:.75em;
+			&:not(:first-child):before {
+				content:"•";
+				color:$green;
+				display: inline-block;
+				//padding:0.25em 0;
+				margin-right: .75em;
+
+			}
+		}
+		@include bp($s3){
+		}
+
+		> a {
+			color:$blue;
+			display: inline-block;
+			text-align: center;
+			text-transform: uppercase;
+			border-top: 2px solid transparent;
+			padding:0.333em 0;
+			&:hover, &:focus {
+				color:$green;
+				//border-top-color: currentColor;
+
+			}
+			
+			@include bp($s2){
+				//font-size: .875em;
+			}
+
+			@include bp($s3){
+				//font-size: 1em;
+			}
+		}
+	}
+
+	li.active {
+		> a {
+			color:$green;
+			border-top-color: currentColor;
+		}
+	}
+
+	
+
+}
+
+
+/********* Prev/Next Link ********/
+a[rel="next"], a[rel="prev"] {
+	font-size: 4em;
+	line-height: 1;
+	padding:0 0.25em;
+	text-align: center;
+	text-decoration: none;
+	color:$white;
+	display: inline-block;
+	&:hover, &:focus {
+
+	}
+	i {
+
+	}
+	
+}
+
+
+/**** WPML Language Switcher ****/
+.lang_sel_list_horizontal, .lang_sel_list_vertical {
+	position: absolute;
+	right:1em;
+	top:0;
+
+	@include bp($s2) {
+		right:2em;
+	}
+	@include bp($s3) {
+		right:3em;
+	}
+	@include bp($s4) {
+		right:4em;
+	}
+
+
+	ul {
+		list-style-type: none;
+		margin:0;
+		padding:0;
+		li {
+			margin:0;
+			padding:0;
+			display: inline-block;
+			a {
+				display: inline-block;
+				background-color: rgba($blue,.35);
+				color:$white;
+				font-size: .75em;
+				line-height: 1;
+				font-weight: 500;
+				padding:.5em .875em .5em;
+				text-align: center;
+				text-transform: uppercase;
+				border-radius:0 0 .5em .5em;
+				margin-left: .5em;
+				&:hover, &:focus {
+					background-color: $green;
+				}
+				&.lang_sel_sel {
+					background-color: $blue;
+				}
+
+			}
+		}
+	}
+
+}
+
+/********* Product Boxed Navigation *******/
+.pnav {
+	padding:3em 0 0;
+}
+
+.pnav__title {
+	font-size: 2em;
+	line-height: 1;
+	padding:.5em 0;
+	border:1px solid currentColor;
+	text-align: center;
+	margin:0 0 1.5em;
+}
+.pnav__item {
+	@include clearfix();
+	position:relative;
+	text-align: center;
+	display: block;
+	background-color: $graymixed;
+	border-radius: .5em;
+	margin:1em 0;
+	padding:0 0 .875em 0;
+	color:$blue;
+	&:hover, &:focus {
+		background-color: $greenmixed;
+		//color:$white;
+		color:$black;
+	}
+	@include bp($s1) {
+		float:left;
+		width:48.5%;
+		margin:1% 0;
+		&:nth-child(2n+1) {
+			clear:both;
+			margin-right: 2%;
+		}		
+	}
+	@include bp($s2) {
+		width:32.333%;
+		margin:.75% 0;
+		margin-right: 1.5%;
+
+		&:nth-child(2n+1) {
+			clear:none;
+			margin-right: 1.5%;
+		}
+		&:nth-child(3n+1) {
+			clear:both;
+			//margin-right: 2%;
+		}
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
+}
+
+
+.pnav__item__img {
+	border-radius: .5em .5em 0 0;
+	display: block;
+}
+.pnav__item__title {
+	margin:.875em .5em 0;
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	line-height: 1;
+}
+
+.pnav__item__subtitle {
+	display: block;
+	margin:0 .5em 0;
+}
+
