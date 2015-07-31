@@ -38,3 +38,89 @@
     right:4em;
   }
 }
+
+
+/********* Hero ***/
+.hero {
+  background-color: $green;
+  color:#fff;
+}
+
+.hero__text {
+  width: 80%;
+  font-size: 2em;
+  z-index:1;
+  position: relative;
+  text-shadow:0 0 3px $green;
+  margin:1.25em 0 2.5em;
+  max-width: 9em;
+}
+.hero__text__title {
+  margin:0;
+  display: inline-block;
+  padding:1rem;
+  border:1px solid  $white;
+  line-height: 1.25;
+  font-weight: 900;
+  text-transform: uppercase;
+  span {
+    color:$blue;
+  }
+  @include bp($s1){
+    padding:1.5rem 1rem 1.333rem 1.5rem;
+    margin-right: 4rem;
+  }
+}
+
+.hero__text__paragr {
+  padding:0;
+  margin:1.5rem 0 0;
+  font-size: .75em;
+  line-height: 1.2;
+  @include bp($s1){
+    margin:1.5rem 0 0 1.5rem;
+  }
+
+  strong {
+    font-style: italic;
+  }
+
+}
+
+.hero__text__more {
+  color:$blue;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: .666em;
+  float:right;
+  display: inline-block;
+  margin-top: .5em;
+}
+
+.hero__figure {
+  position: absolute;
+  right:-3em;
+  bottom:0;
+  margin:0;
+  padding:0;
+  width:20em;
+  overflow: hidden;
+  z-index: 0;
+  img {
+    display: block;
+  }
+  @include bp($s1) {
+    width:35em;
+    right:-5em;
+  }
+  @include bp($s2) {
+    width:58em;
+    right:-8em;
+
+  }
+  @include bp($s3) {
+  }
+  @include bp($s4) {
+    right:0;
+  } 
+}
