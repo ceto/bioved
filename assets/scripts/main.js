@@ -75,3 +75,24 @@
   $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
+
+
+$('.nav-toggle').click( function(e) {
+  $(this).toggleClass('is_open');
+});
+
+$.localScroll({
+        target: 'body', // could be a selector or a jQuery object too.
+        queue:true,
+        duration:1000,
+        hash:true,
+        onBefore:function( e, anchor, $target ){
+          // The 'this' is the settings object, can be modified
+        },
+        onAfter:function( anchor, settings ){
+          // The 'this' contains the scrolled element (#content)
+        }
+      });
+//$('.pnav__item').localScroll();
+
+

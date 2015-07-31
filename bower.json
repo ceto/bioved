@@ -9,11 +9,19 @@
   "dependencies": {
     "modernizr": "2.8.2",
     "bootstrap-sass-official": "3.3.5",
-    "normalize.css": "~3.0.3"
+    "normalize.css": "~3.0.3",
+    "jquery.localScroll": "~1.4.0",
+    "jquery.scrollTo": "~2.1.1"
   },
   "overrides": {
     "modernizr": {
       "main": "./modernizr.js"
+    },
+    "jquery.scrollTo": {
+      "main": "./jquery.scrollTo.js"
+    },
+    "jquery.localScroll": {
+      "main": "./jquery.localScroll.js"
     },
     "bootstrap-sass-official": {
       "main": [
@@ -29,12 +37,7 @@
         "./assets/javascripts/bootstrap/popover.js",
         "./assets/javascripts/bootstrap/scrollspy.js",
         "./assets/javascripts/bootstrap/tab.js",
-        "./assets/javascripts/bootstrap/affix.js",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+        "./assets/javascripts/bootstrap/affix.js"
       ]
     }
   }

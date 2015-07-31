@@ -2,6 +2,9 @@
   "dependencies": {
     "main.js": {
       "files": [
+        "../bower_components/jquery.scrollTo/jquery.scrollTo.js",
+        "../bower_components/jquery.localScroll/jquery.localScroll.js",
+        "scripts/contact-form.js",
         "scripts/main.js"
       ],
       "main": true

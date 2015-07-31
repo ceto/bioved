@@ -1,20 +1,26 @@
 .nav-toggle {
 	position: absolute;
-	right:.75em;
-	top:2em;
+	right:.5em;
+	top:1.5em;
+	width:1em;
+	text-align: center;
 	display: inline-block;
 	font-weight: 900;
-	font-size: 1.5em;
+	font-size: 2em;
 	line-height: 1;
 	cursor: pointer;
 	float:right;
 	&:hover, &:focus {
 		//box-shadow:inset 0 0 0 1px $cyan;
-		//color:$cyan-dark;
+		color:$green;
 	}
 
 	i {
-		font-size: 1.875em;
+		font-size:1em;
+	}
+
+	&.is_open i:before {
+		content: "\f2d7";
 	}
 
 	@include bp($s2) {
@@ -62,8 +68,12 @@ input[type="checkbox"]#navtoggle {
 	}
 
 	.wrapper {
-		padding-top: 2em;
-		padding-bottom: 2em;
+		padding-top: 1.5em;
+		padding-bottom: 1.5em;
+		@include bp($s2){
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
 	}
 }
 
@@ -74,10 +84,16 @@ input[type="checkbox"]#navtoggle {
 	background-position: left center;
 	background-size: auto 100%;
 	display: inline-block;
-	width:12.5em;
-	height:5.5em;
+	width:10.125em;
+	height:4.5em;
+	//background-color: red;
 	@include bp($s2){
 		float:left;
+
+	}
+	@include bp($s3){
+		width:12.5em;
+		height:5.5em;
 	}
 }
 
@@ -107,13 +123,13 @@ input[type="checkbox"]#navtoggle {
 	@include bp($s2){
 		transform:none;
 		height: auto;
-		margin:2.333em 0;
+		margin:1.875em 0 0;
 		padding:0;
 		float:right;
 		text-align:right;
 	}
 
-
+	
 	li {
 		display: block;
 		margin:1em 0;
@@ -124,18 +140,19 @@ input[type="checkbox"]#navtoggle {
 		@include bp($s2){
 			display: inline-block;
 			margin:0;
-			margin-left:.5em;
-			font-size:.75em;
-			&:not(:first-child):before {
+			margin-left:.333em;
+			font-size:.666em;
+			&:not(:first-child):not(:nth-child(2)):before {
 				content:"•";
 				color:$green;
 				display: inline-block;
 				//padding:0.25em 0;
-				margin-right: .75em;
-
+				margin-right: .5em;
+				transform:translateY(-.1em);
 			}
 		}
 		@include bp($s3){
+			font-size:.875em;
 		}
 
 		> a {
@@ -160,7 +177,17 @@ input[type="checkbox"]#navtoggle {
 			}
 		}
 	}
+	
+	li.homelink {
+		@include bp($s2) {
+			margin-right: .25em;
+		}
 
+		i {
+			font-size: 133.333%;
+			line-height: .5;
+		}
+	}
 	li.active {
 		> a {
 			color:$green;
@@ -309,6 +336,11 @@ a[rel="next"], a[rel="prev"] {
 	text-transform: uppercase;
 	font-size: 1.25em;
 	line-height: 1;
+	i{
+		color:$gray;
+		font-size: .75em;
+		line-height: .5;
+	}
 }
 
 .pnav__item__subtitle {

@@ -18,7 +18,7 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
-    <div role="document">
+    <div role="document" class="document">
       <?php include Wrapper\template_path(); ?>
     </div><!-- /.wrap -->
     <?php

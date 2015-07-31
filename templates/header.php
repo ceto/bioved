@@ -2,7 +2,7 @@
   <div class="wrapper wrapper--wide">
     <a class="navbar__brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
     <?php do_action('wpml_add_language_selector'); ?>
-    <label class="nav-toggle" for="navtoggle"><i class="ion ion-navicon"></i>MENÜ</label>
+    <label class="nav-toggle" for="navtoggle"><i class="ion ion-navicon"></i></label>
     <input type="checkbox" id="navtoggle">
     <nav role="navigation" class="navbar__nav">
       <?php

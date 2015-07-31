@@ -25,7 +25,7 @@
           <?php if (is_page_template('template-home.php')): ?>
             <img src="http://placehold.it/480x240/434343" alt="<?php the_title(); ?>" class="pnav__item__img">
           <?php endif ?>
-          <h3 class="pnav__item__title"><?php the_title(); ?></h3>
+          <h3 class="pnav__item__title"><?php the_title(); ?>&nbsp;<i class="ion ion-chevron-down"></i></h3>
           <span class="pnav__item__subtitle">Lorep <strong>Biovéd</strong> dolor sit amet</span>
         </a>
       <?php endwhile; ?>
