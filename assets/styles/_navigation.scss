@@ -295,7 +295,8 @@ a[rel="next"], a[rel="prev"] {
 	&:hover, &:focus {
 		background-color: $greenmixed;
 		//color:$white;
-		color:$black;
+		//color:$gray;
+		outline: none;
 	}
 	@include bp($s1) {
 		float:left;
@@ -326,9 +327,55 @@ a[rel="next"], a[rel="prev"] {
 }
 
 
+.pnav__item__imgwrap {
+	position: relative;
+	margin:0;
+	padding:0;
+	&:after {
+		content: "\f3d3";
+		content: "";
+		font-family: "Ionicons";
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		text-rendering: auto;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		position: absolute;
+		background-color: rgba($green,.4);
+		left:0;
+		top:0;
+		width:100%;
+		height: 100%;
+		text-align: center;
+		font-size: 3em;
+		line-height: 1;
+		padding-top: 30%;
+		color:#fff;
+		opacity: 0;
+		border-radius: .5em .5em 0 0;
+		.pnav__item:hover &, .pnav__item:focus &{ 
+			opacity: .5;
+		}
+	}
+
+}
 .pnav__item__img {
 	border-radius: .5em .5em 0 0;
 	display: block;
+	max-width: none;
+	width:100%;
+
+
+
+	.pnav__item:hover &, .pnav__item:focus &{
+		//opacity: .8;
+		
+	}
+
 }
 .pnav__item__title {
 	margin:.875em .5em 0;

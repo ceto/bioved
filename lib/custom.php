@@ -43,7 +43,7 @@ function bv_create_product() {
     'has_archive' => false, 
     'hierarchical' => true,
     'menu_position' => null,
-    //'supports' => array( 'title', 'thumbnail', 'page-attributes', 'editor')
+    'supports' => array( 'title', 'thumbnail', 'page-attributes', 'editor')
   ); 
   register_post_type( 'product', $args );
 }
