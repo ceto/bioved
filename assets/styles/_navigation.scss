@@ -1,23 +1,35 @@
 .nav-toggle {
 	position: absolute;
-	right:.5em;
-	top:1.5em;
-	width:1em;
+	right:1.333em;
+	top:4em;
+	//min-width:6.25em;
+	//min-height:2.5em;
 	text-align: center;
 	display: inline-block;
-	font-weight: 900;
-	font-size: 2em;
-	line-height: 1;
+	padding:.5em .875em .4em;
+	font-weight: 500;
+	font-size: .75em;
+	line-height: 1.75;
 	cursor: pointer;
 	float:right;
+	text-transform: uppercase;
+
+	color:#fff;
+	background-color: $blue;
+	border-radius: .5em;
 	&:hover, &:focus {
 		//box-shadow:inset 0 0 0 1px $cyan;
-		color:$green;
+		background-color:$green;
 	}
 
 	i {
-		font-size:1em;
+		//font-size:1.5em;
+		//line-height: 1.25;
+		transform: scale(1.75);
+		margin:0 0.125em 0 .5em;
+
 	}
+
 
 	&.is_open i:before {
 		content: "\f2d7";
@@ -141,7 +153,7 @@ input[type="checkbox"]#navtoggle {
 			display: inline-block;
 			margin:0;
 			margin-left:.333em;
-			font-size:.666em;
+			font-size:.75em;
 			&:not(:first-child):not(:nth-child(2)):before {
 				content:"•";
 				color:$green;
@@ -272,13 +284,18 @@ a[rel="next"], a[rel="prev"] {
 /********* Product Boxed Navigation *******/
 .pnav {
 	padding:3em 0 0;
+	max-width: 350px;
+	margin:0 auto;
+	@include bp($s1) {
+		max-width: none;
+	}
 }
 
 .pnav__title {
 	font-size: 2em;
 	line-height: 1;
 	padding:.5em 0;
-	border:1px solid currentColor;
+	border:2px solid currentColor;
 	text-align: center;
 	margin:0 0 1.5em;
 }

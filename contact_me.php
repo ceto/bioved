@@ -1,7 +1,7 @@
 ﻿<?php
 if($_POST)
 {
-	$to_Email	= "stbu@proaktiveiendom.no"; //Replace with recipient email address
+	$to_Email	= "szabogabi@gmail.com"; //Replace with recipient email address
 	$subject = 'Melding fra Hamrestolen'; //Subject line for emails
 	
 	

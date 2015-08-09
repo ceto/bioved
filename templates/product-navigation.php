@@ -13,7 +13,7 @@
 ?>
 
 <section class="pnav">
-  <div class="wrapper wrapper--wide">
+  <div class="wrapper wrapper--narrow">
     
     <?php if (is_page_template('template-home.php')): ?>
        <h2 class="pnav__title"><?php _e('Termékeink','bv') ?></h2>

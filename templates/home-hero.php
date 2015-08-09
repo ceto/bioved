@@ -2,7 +2,7 @@
   <div class="wrapper wrapper--wide">
     <div class="hero__item">
       <div class="hero__text">
-        <h3 class="hero__text__title"><span>Bilógiai</span> védelem</h3>
+        <h3 class="hero__text__title"><span>Biológiai</span> védelem</h3>
         <p class="hero__text__paragr">
           Lorem Ipsum, <strong>poin gravida</strong> nibh vel velit auctor aliquet, <strong>aenean sollicitudin,</strong> lorem sagittis sem evolit.
           <a class="hero__text__more" href="#">Tovább&nbsp;<i class="ion ion-ios-arrow-right"></i></a>

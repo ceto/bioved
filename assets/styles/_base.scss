@@ -91,6 +91,12 @@ a {
 	}
 }
 
+.wrapper--normal {
+	max-width: 40em;
+	@include bp($s3) {
+		max-width: $normalmax;
+	}
+}
 
 
 
