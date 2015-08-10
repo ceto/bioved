@@ -49,3 +49,103 @@ function bv_create_product() {
 }
 add_action( 'init', 'bv_create_product' );
 
+
+
+/************ MetaBoxes **********/
+
+add_filter( 'cmb2_meta_boxes', 'bv_metaboxes' );
+function bv_metaboxes( array $meta_boxes ) {
+    /**
+     * Apartment Metaboxes
+    */
+  $prefix = '_meta_';
+  $meta_boxes['download'] = array(
+    'id'         => 'meta',
+    'title'      => 'Kiegészítő',
+    'object_types'  => array( 'page'), // Post type
+    'show_on'      => array( 'key' => 'page-template', 'value' => 'template-download.php' ),
+    'context'    => 'normal',
+    'priority'   => 'high',
+    'show_names' => true, // Show field names on the left
+    'fields'     => array (
+            array (
+                'id' => 'dls',
+                'type' => 'group',
+                'description' => 'Letölthető anyagok',
+                'options'     => array (
+                    'group_title'   => 'File {#}', 
+                    'add_button'    => 'Új file',
+                    'remove_button' => 'Fájl törlése',
+                    'sortable'      => true, // beta
+                ),
+                'fields'     => array(
+                    array (
+                        'name' => 'Megnevezés',
+                        'id'   => 'name',
+                        'type' => 'text_medium',
+                    ),
+                    array (
+                        'name' => 'File',
+                        'id'   => 'file',
+                        'type' => 'file',
+                    ),
+            ) // end of fields
+        )
+    ) 
+  );
+    $meta_boxes['home'] = array(
+        'id'         => 'homemeta',
+        'title'      => 'Slide Show',
+        'object_types'  => array( 'page'),
+        'show_on'      => array( 'key' => 'page-template', 'value' => 'template-home.php' ),
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true,
+        'fields'     => array (
+                array (
+                    'id' => 'slides',
+                    'type' => 'group',
+                    'description' => 'Slide show',
+                    'options'     => array (
+                        'group_title'   => 'Slide {#}', 
+                        'add_button'    => 'Új Slide',
+                        'remove_button' => 'Slide törlése',
+                        'sortable'      => true, // beta
+                    ),
+                    'fields'     => array(
+                        array (
+                            'name' => 'Cím',
+                            'id'   => 'title',
+                            'type' => 'text_medium',
+                        ),
+                        array (
+                            'name' => 'Bekezdés',
+                            'id'   => 'paragpraph',
+                            'type' => 'text_medium',
+                        ),
+                        array (
+                            'name' => 'Tovább link',
+                            'id'   => 'link',
+                            'type' => 'text_url',
+                        ),
+
+                        array (
+                            'name' => 'Kép',
+                            'id'   => 'photo',
+                            'type' => 'file',
+                        ),
+                ) // end of fields
+            )
+        ) 
+    );
+  return $meta_boxes;
+}
+
+
+
+function bv_getSize($file){
+    $bytes = filesize($file);
+    $s = array('byte', 'Kbyte', 'Mbyte', 'Gbyte');
+    $e = floor(log($bytes)/log(1024));
+    return sprintf('%.1f '.$s[$e], ($bytes/pow(1024, floor($e))));
+}

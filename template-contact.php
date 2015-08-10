@@ -13,7 +13,7 @@
       <div class="wrapper wrapper--narrow">
         <div class="contact__content">
           <figure class="contact__figure">
-            <img src="http://placehold.it/1200x300/434343" alt="">        
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kapcsolat_head.jpg" alt="">        
           </figure>
        
           <?php the_content(); ?>

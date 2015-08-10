@@ -403,7 +403,15 @@ a[rel="next"], a[rel="prev"] {
 	i{
 		color:$gray;
 		font-size: .75em;
-		line-height: .5;
+		//line-height: .5;
+		transform: translateY(-.125em);
+		.page-template-template-home & {
+			//line-height: .333;
+			&:before {
+
+					content:"\f125";
+			}
+		}
 	}
 }
 

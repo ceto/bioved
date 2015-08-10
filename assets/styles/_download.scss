@@ -1,0 +1,57 @@
+.dl {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0 .5em;
+  width:100%;
+}
+.dlitem {
+  display: table-row;  
+  span {
+    vertical-align: middle;
+    display: table-cell;
+    padding:1em .5em;
+    background-color: $graymixed;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .dlitem__name {
+    padding:1em .5em 1em .875em;
+    font-weight: 700;
+    border-radius: .333em 0 0 .333em;
+    text-align: left;
+    font-size: 1.125em;
+  }
+
+  .dlitem__dl {
+    padding:1em .875em 1em .5em;
+    text-align: right;
+    border-radius: 0 .333em .333em 0;
+  }
+}
+
+.dlitem--head {
+  font-weight: 500;
+  font-size: .875em;
+  span {
+    background-color: transparent;
+    padding:.333em .5em;
+  }
+}
+.btn--bordered {
+  border-radius: 0;
+  color:$blue;
+  border:2px solid currentColor;
+  background-color: transparent;
+  font-size: .75em;
+  padding: .5em .75em;
+  white-space: nowrap;
+  &:hover, &:focus {
+    color:#fff;
+    background-color: $blue;
+    border-color: $blue
+  }
+  i {
+    margin-left: .333em;
+  }
+}
