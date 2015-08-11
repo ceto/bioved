@@ -36,7 +36,7 @@
 
   @include bp($s1) {
     padding-left: .5em;
-    margin-top: 0;
+    margin-top: .333em;
     float:right;
     width:33.333%;
   }
@@ -48,7 +48,7 @@
 
 .cill {
   margin:0 auto;
-  max-width: 22em;
+  //max-width: 12em;
   padding:0;
   border-radius: .5em;
   text-align: center;

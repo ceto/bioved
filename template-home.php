@@ -8,7 +8,7 @@
   <?php while (have_posts()) : the_post(); ?>
   
 
-   <?php get_template_part('templates/home', 'hero'); ?>
+   <?php get_template_part('templates/home', 'heroslide'); ?>
 
     
    <?php get_template_part('templates/product', 'navigation'); ?>
@@ -17,7 +17,7 @@
    <section class="aboutus bg-graylight"> 
       <div class="wrapper wrapper--wide">
         <figure class="aboutus__ill">
-          <img src="<?= get_stylesheet_directory_uri();  ?>/dist/images/kisvirag.png" alt="">
+          <img src="<?= get_stylesheet_directory_uri();  ?>/dist/images/petri.png" alt="">
         </figure>
         <div class="aboutus__content">
           <h1><?php the_title(); ?></h1>

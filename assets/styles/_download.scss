@@ -9,22 +9,22 @@
   span {
     vertical-align: middle;
     display: table-cell;
-    padding:1em .5em;
+    padding:1em .125em;
     background-color: $graymixed;
     text-align: center;
     line-height: 1;
   }
 
   .dlitem__name {
-    padding:1em .5em 1em .875em;
+    padding:1em .125em 1em .875em;
     font-weight: 700;
     border-radius: .333em 0 0 .333em;
     text-align: left;
-    font-size: 1.125em;
+    font-size: 1.25em;
   }
 
   .dlitem__dl {
-    padding:1em .875em 1em .5em;
+    padding:1em .875em 1em .125em;
     text-align: right;
     border-radius: 0 .333em .333em 0;
   }
@@ -35,7 +35,7 @@
   font-size: .875em;
   span {
     background-color: transparent;
-    padding:.333em .5em;
+    padding:.333em .125em;
   }
 }
 .btn--bordered {

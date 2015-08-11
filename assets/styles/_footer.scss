@@ -1,6 +1,5 @@
 .pagefooter {
   padding:3em 0 6em;
-  text-align: center;
 
 }
 
@@ -11,6 +10,7 @@
   text-transform: uppercase;
   font-weight: 900;
   font-size: .875em;
+  text-align: center;
   a {
     font-weight: 500;
     color:$white;
@@ -20,12 +20,25 @@
   }
 }
 
+.pagefooter__logo {
+  margin:1.25em 0 0;
+  padding:0;
+  text-align: center;
+  
+  img {
+    max-width: 30px;
+  }
+ 
+
+}
 
 .pagefooter__copy {
   font-size: .75em;
   margin:1.25em 0 0;
   font-weight: 500;
   color:$gray;
+  text-align: center;
+  clear:both;
 }
 .pagefooter__tothetop {
 	font-weight: 300;

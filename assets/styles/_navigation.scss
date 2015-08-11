@@ -284,7 +284,7 @@ a[rel="next"], a[rel="prev"] {
 /********* Product Boxed Navigation *******/
 .pnav {
 	padding:3em 0 0;
-	max-width: 350px;
+	max-width: 24em;
 	margin:0 auto;
 	@include bp($s1) {
 		max-width: none;
@@ -297,7 +297,7 @@ a[rel="next"], a[rel="prev"] {
 	padding:.5em 0;
 	border:2px solid currentColor;
 	text-align: center;
-	margin:0 0 1.5em;
+	margin:.25em 0 .25em;
 }
 .pnav__item {
 	@include clearfix();
@@ -373,7 +373,7 @@ a[rel="next"], a[rel="prev"] {
 		padding-top: 30%;
 		color:#fff;
 		opacity: 0;
-		border-radius: .5em .5em 0 0;
+		border-radius: .1666em .1666em 0 0;
 		.pnav__item:hover &, .pnav__item:focus &{ 
 			opacity: .5;
 		}

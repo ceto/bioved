@@ -18,10 +18,10 @@
         
           <section class="dl">
           <div class="dlitem dlitem--head">
-            <span>&nbsp;</span>
+            <span></span>
             <span>formátum</span>
             <span>méret</span>
-            <span>&nbsp;</span>
+            <span></span>
           </div>
             <?php if ( get_post_meta( get_the_ID(), 'dls', true ) ) {
               $dls = get_post_meta( get_the_ID(), 'dls', true );

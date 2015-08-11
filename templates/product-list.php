@@ -33,12 +33,10 @@
             </div>
 
           </div>
+          <?php $sideill = wp_get_attachment_image_src(get_post_meta( $post->ID, 'sideill_id', 'true' ), 'full', true); ?>
           <div class="cright">
             <figure class="cill">
-              <img src="http://placehold.it/640x480/434343/?text=Illustration+I." alt="">
-            </figure>
-            <figure class="cill">
-              <img src="http://placehold.it/640x640/434343/?text=Illustration+N." alt="">
+              <img src="<?= $sideill[0]; ?>" alt="<?php the_title(); ?>">
             </figure>
           </div>
         </div>

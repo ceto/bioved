@@ -138,6 +138,25 @@ function bv_metaboxes( array $meta_boxes ) {
             )
         ) 
     );
+
+    $meta_boxes['page'] = array(
+    'id'         => 'meta',
+    'title'      => 'Kiegészítő',
+    'object_types'  => array( 'page', 'product'), // Post type
+    //'show_on'      => array( 'key' => 'page-template', 'value' => 'template-download.php' ),
+    'context'    => 'side',
+    'priority'   => 'low',
+    'show_names' => true, // Show field names on the left
+    'fields'     => array (
+        array (
+            'name' => 'Oldalsáv illusztráció',
+            'id'   => 'sideill',
+            'type' => 'file',
+        ),
+
+      )
+    );
+
   return $meta_boxes;
 }
 
@@ -145,7 +164,7 @@ function bv_metaboxes( array $meta_boxes ) {
 
 function bv_getSize($file){
     $bytes = filesize($file);
-    $s = array('byte', 'Kbyte', 'Mbyte', 'Gbyte');
+    $s = array('b', 'Kb', 'Mb', 'Gb');
     $e = floor(log($bytes)/log(1024));
     return sprintf('%.1f '.$s[$e], ($bytes/pow(1024, floor($e))));
 }
