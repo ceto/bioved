@@ -3,7 +3,7 @@
       
       <div class="item">
 
-        <div class="hero__item wrapper wrapper--wide">
+        <div class="hero__item wrapper wrapper--wide" style="background-image:url(<?= get_stylesheet_directory_uri()  ?>/dist/images/hero_bird.png)">
           <div class="hero__text">
             <h3 class="hero__text__title"><span>Biológiai</span> védelem</h3>
             <p class="hero__text__paragr">
@@ -11,15 +11,12 @@
               <a class="hero__text__more" href="#">Tovább&nbsp;<i class="ion ion-ios-arrow-right"></i></a>
             </p>
           </div>
-          <figure class="hero__figure">
-            <img src="<?= get_stylesheet_directory_uri()  ?>/dist/images/hero_bird.png" alt="">
-          </figure>  
         </div>
 
       </div>
       
       <div class="item">
-        <div class="hero__item wrapper wrapper--wide">
+        <div class="hero__item wrapper wrapper--wide" style="background-image: url('<?= get_stylesheet_directory_uri()  ?>/dist/images/hero_bird.png')">
           <div class="hero__text">
             <h3 class="hero__text__title">Lorem <span>ipsum dolor</span></h3>
             <p class="hero__text__paragr">
@@ -27,15 +24,12 @@
               <a class="hero__text__more" href="#">Tovább&nbsp;<i class="ion ion-ios-arrow-right"></i></a>
             </p>
           </div>
-          <figure class="hero__figure">
-            <img src="<?= get_stylesheet_directory_uri()  ?>/dist/images/hero_bird.png" alt="">
-          </figure>  
         </div>
       </div>
 
       <div class="item">
 
-        <div class="hero__item wrapper wrapper--wide">
+        <div class="hero__item wrapper wrapper--wide" style="background-image:url('http://placehold.it/800x800/?text=negyzetbe+zarhato+transparens+png')">
           <div class="hero__text">
             <h3 class="hero__text__title"><span>Sit amet</span> védelem</h3>
             <p class="hero__text__paragr">
@@ -43,9 +37,6 @@
               <a class="hero__text__more" href="#">Tovább&nbsp;<i class="ion ion-ios-arrow-right"></i></a>
             </p>
           </div>
-          <figure class="hero__figure">
-            <img src="http://placehold.it/800x800/?text=negyzetbe+zarhato+transparens+png" alt="semmi">
-          </figure>  
         </div>
 
       </div>

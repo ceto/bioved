@@ -59,19 +59,32 @@
 }
 
 
+.page-template-template-home .navbar {
+  @include bp($s2) {
+    margin-bottom: -2.75em;
+  }
+}
+
 .hero {
+  @include clearfix();
+  clear:both;
   background-color: $green;
   color:#fff;
 
   @include bp($s2) {
     background-color: transparent;
     background-image: linear-gradient(to bottom, transparent 0, transparent 3em, $green 3em);
-    margin-top: -3em;
+    //margin-top: -3em;
   }
 }
 
 .hero__item {
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: auto 9em;
   @include bp($s2) {
+    background-size: auto 100%;
+    background-position: 100% bottom;
   }
   @include bp($s3) {
   }
@@ -84,20 +97,19 @@
   z-index:1;
   position: relative;
   text-shadow:0 0 3px $green;
-  margin:1.25em auto 1.25em;
+  margin:1.25em auto;
   max-width: 11em;
-  
+  height:12em;
+  text-overflow: ellipsis;  
+
   @include bp($s1){
     
   }
   @include bp($s2) {
-    margin:3.25em 0 2.5em;
-
+    margin:3.25em 0 1.25em;
     max-width: 9em;
-    float:left;
-    height:10em;
-    padding-bottom: 2em;
-    text-overflow: ellipsis;
+    height:11em;
+
   }
 
 }
@@ -145,76 +157,3 @@
   margin-right: .333em;
 }
 
-// .hero__figure {
-//   margin:0 auto;
-//   max-width: 28em;
-//   img {
-//     display: block;
-//   }
-//   @include bp($s1) {
-
-
-//    }
-//   @include bp($s2) {
-//     max-width: none;
-//     position: absolute;
-//     bottom:0;
-//     margin:0;
-//     padding:0;
-//     overflow: hidden;
-//     z-index: 0;    
-//     width:58em;
-//     right:-8em;
-
-//   }
-//   @include bp($s3) {
-//   }
-//   @include bp($s4) {
-//     right:0;
-//   } 
-// }
-
-
-.hero__figure {
-  margin:0 auto;
-  padding:0;
-  max-width: 28em;
-  img {
-    display: block;
-     height:12em;
-    max-width: none;
-    width:auto;
-    margin:0 auto; 
-  }
-  @include bp($s1) {
-
-
-   }
-  @include bp($s2) {
-    margin:0;
-    text-align: right;
-    position: absolute;
-    bottom:0;
-    top:0;
-    right:0;
-    z-index:0;
-    img {
-      margin:0;
-      display: block;
-      height:100%;
-      max-width: none;
-      width:auto;
-      float:right;
-
-    }
-  }
-
-  @include bp($s3) {
-    img {
-
-    }
-  }
-  @include bp($s4) {
-    //right:0;
-  } 
-}
