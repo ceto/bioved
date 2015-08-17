@@ -10,7 +10,7 @@
 
     <div class="thecontent bg-graylight">
       
-      <div class="wrapper wrapper--narrow">
+      <div class="wrapper wrapper--wide">
         <div class="contact__content">
           <figure class="contact__figure">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kapcsolat_head.jpg" alt="">        

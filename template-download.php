@@ -11,7 +11,7 @@
 
     <div class="thecontent bg-graylight">
       
-      <div class="wrapper wrapper--narrow">
+      <div class="wrapper wrapper--wide">
         <div class="dl__content">
        
           <?php the_content(); ?>

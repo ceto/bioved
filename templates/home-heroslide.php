@@ -16,7 +16,7 @@
       </div>
       
       <div class="item">
-        <div class="hero__item wrapper wrapper--wide" style="background-image: url('<?= get_stylesheet_directory_uri()  ?>/dist/images/hero_bird.png')">
+        <div class="hero__item wrapper wrapper--wide" style="background-image: url('<?= get_stylesheet_directory_uri()  ?>/dist/images/hero_products.png')">
           <div class="hero__text">
             <h3 class="hero__text__title">Lorem <span>ipsum dolor</span></h3>
             <p class="hero__text__paragr">
@@ -29,7 +29,7 @@
 
       <div class="item">
 
-        <div class="hero__item wrapper wrapper--wide" style="background-image:url('http://placehold.it/800x800/?text=negyzetbe+zarhato+transparens+png')">
+        <div class="hero__item wrapper wrapper--wide" style="background-image:url('<?= get_stylesheet_directory_uri()  ?>/dist/images/hero_kutatasok.png')">
           <div class="hero__text">
             <h3 class="hero__text__title"><span>Sit amet</span> védelem</h3>
             <p class="hero__text__paragr">

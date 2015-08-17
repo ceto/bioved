@@ -61,13 +61,13 @@ a {
 		padding:0 1em;
 	}
 	@include bp($s2) {
-		padding:0 2em;
-	}
-	@include bp($s3) {
 		padding:0 3em;
 	}
-	@include bp($s4) {
+	@include bp($s3) {
 		padding:0 4em;
+	}
+	@include bp($s4) {
+		padding:0 6em;
 	}
 }
 
