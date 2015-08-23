@@ -92,6 +92,10 @@
   @include bp($s2) {
     background-size: auto 100%;
     background-position: 100% bottom;
+    .item--flip & {
+       background-position: 0 bottom;
+    }
+
   }
   @include bp($s3) {
   }
@@ -117,7 +121,10 @@
     margin:3.25em 0 1.25em 0;
     max-width: 9em;
     height:11em;
-
+    .item--flip & {
+      float:right;
+      margin-right: .5em;
+    }
   }
 
 }
@@ -134,9 +141,11 @@
       position: absolute;
       content:'';
       left:-1.5rem;
-      right:-2.5rem;
+      right:-3rem;
+      //width:100%;
       top:-1.125rem;
-      bottom:-4rem;
+      bottom:-1rem;
+      height: 3.5em;
       display: block;
       border:2px solid  $white;
 
@@ -151,9 +160,10 @@
 
 .hero__text__paragr {
   padding:0;
-  margin:1.875rem 0 0;
+  margin:2.875rem 0 0;
   font-size: .75em;
   line-height: 1.2;
+  clear:both;
   @include bp($s2){
   }
 
