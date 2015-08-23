@@ -33,6 +33,10 @@
         </a>
       <?php endwhile; ?>
     </div>
+    <?php if (!is_page_template('template-home.php')): ?>
+      <img class="pnav__imgdivider" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/napraforgomezo.jpg" alt="Termékeink">
+    <?php endif ?>
+
 
   </div>
 </section>

@@ -104,16 +104,17 @@
   z-index:1;
   position: relative;
   text-shadow:0 0 3px $green;
-  margin:1.25em auto;
+  margin:1.75em auto;
   max-width: 11em;
   height:14em;
-  text-overflow: ellipsis;  
+  text-overflow: ellipsis;
+  padding-left: 1.5rem;  
 
   @include bp($s1){
     
   }
   @include bp($s2) {
-    margin:3.25em 0 1.25em;
+    margin:3.25em 0 1.25em 0;
     max-width: 9em;
     height:11em;
 
@@ -121,31 +122,39 @@
 
 }
 .hero__text__title {
+  position: relative;
   margin:0;
-  display: inline-block;
-  padding:1rem;
-  border:2px solid  $white;
+  display: inline;
+  padding:0;
   line-height: 1.25;
   font-weight: 900;
   text-transform: uppercase;
   text-align: left;
+  &:before {
+      position: absolute;
+      content:'';
+      left:-1.5rem;
+      right:-2.5rem;
+      top:-1.125rem;
+      bottom:-4rem;
+      display: block;
+      border:2px solid  $white;
+
+    }
 
   span {
     color:$blue;
   }
   @include bp($s2){
-    padding:1.5rem 1rem 1.333rem 1.5rem;
-    margin-right: 4rem;
   }
 }
 
 .hero__text__paragr {
   padding:0;
-  margin:1.5rem 0 0;
+  margin:1.875rem 0 0;
   font-size: .75em;
   line-height: 1.2;
   @include bp($s2){
-    margin:1.5rem 0 0 1.5rem;
   }
 
   strong {

@@ -284,7 +284,7 @@ a[rel="next"], a[rel="prev"] {
 
 /********* Product Boxed Navigation *******/
 .pnav {
-	padding:3em 0 0;
+	padding:.5em 0 0;
 	max-width: 24em;
 	margin:0 auto;
 	@include bp($s1) {
@@ -298,7 +298,7 @@ a[rel="next"], a[rel="prev"] {
 	padding:.5em 0;
 	border:2px solid currentColor;
 	text-align: center;
-	margin:.25em 0 .25em;
+	margin:1.333em 0 .25em;
 }
 .pnav__item {
 	@include clearfix();
@@ -421,3 +421,8 @@ a[rel="next"], a[rel="prev"] {
 	margin:0 .5em 0;
 }
 
+.pnav__imgdivider {
+  margin-top: .25em;
+  border-radius: .5em .5em;
+
+}
