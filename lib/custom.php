@@ -142,7 +142,26 @@ function bv_metaboxes( array $meta_boxes ) {
     $meta_boxes['page'] = array(
     'id'         => 'meta',
     'title'      => 'Kiegészítő',
-    'object_types'  => array( 'page', 'product'), // Post type
+    'object_types'  => array('product'), // Post type
+    //'show_on'      => array( 'key' => 'page-template', 'value' => 'template-download.php' ),
+    'context'    => 'side',
+    'priority'   => 'low',
+    'show_names' => true, // Show field names on the left
+    'fields'     => array (
+        array (
+            'name' => 'Alcím',
+            'id'   => 'subtitle',
+            'type' => 'text_medium',
+        ),
+
+      )
+    );
+
+
+    $meta_boxes['pproduct'] = array(
+    'id'         => 'pmeta',
+    'title'      => 'Termék részletek',
+    'object_types'  => array('product'), // Post type
     //'show_on'      => array( 'key' => 'page-template', 'value' => 'template-download.php' ),
     'context'    => 'side',
     'priority'   => 'low',

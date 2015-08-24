@@ -11,5 +11,6 @@
     <p class="pagefooter__copy">
       &copy; 2015 Biovéd 2005 Kft
     </p>
+    <a class="tothetop" href="#pagetop"><i class="ion ion-chevron-up"></i></a>
   </div>
 </footer>

@@ -62,3 +62,31 @@
 		transform:rotate(90deg);
 	}
 }
+
+.tothetop {
+  position: fixed;
+  bottom:1px;
+  right:1rem;
+  display: inline-block;
+  background-color: rgba($gray,.3);
+  color:rgba(#fff,.875);
+  font-size: 1.25em;
+  line-height: 1;
+  padding:.333em .75em .25em;
+  text-align: center;
+  border-radius:.5rem .5rem 0 0;
+  &:hover, &:focus {
+    background-color: rgba($gray,.5); 
+  }
+
+  @include bp($s2) {
+    right:3rem;
+  }
+  @include bp($s3) {
+    right:.5rem;
+  }
+
+  @include bp($s4) {
+    right:1.5rem;
+  }
+}

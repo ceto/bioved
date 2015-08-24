@@ -1,4 +1,4 @@
-<header class="navbar">
+<header class="navbar" id="pagetop">
   <div class="wrapper wrapper--wide">
     <a class="navbar__brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
     <?php do_action('wpml_add_language_selector'); ?>

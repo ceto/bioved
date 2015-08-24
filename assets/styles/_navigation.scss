@@ -318,7 +318,7 @@ a[rel="next"], a[rel="prev"] {
 	}
 	@include bp($s1) {
 		float:left;
-		width:48.5%;
+		width:49%;
 		margin:1% 0;
 		&:nth-child(2n+1) {
 			clear:both;
@@ -326,13 +326,13 @@ a[rel="next"], a[rel="prev"] {
 		}		
 	}
 	@include bp($s2) {
-		width:32.333%;
-		margin:.75% 0;
-		margin-right: 1.5%;
+		width:31.666%;
+		margin:1.25% 0;
+		margin-right: 2.5%;
 
 		&:nth-child(2n+1) {
 			clear:none;
-			margin-right: 1.5%;
+			margin-right: 2.5%;
 		}
 		&:nth-child(3n+1) {
 			clear:both;
@@ -422,7 +422,12 @@ a[rel="next"], a[rel="prev"] {
 }
 
 .pnav__imgdivider {
-  margin-top: .25em;
+  margin-top: 0;
   border-radius: .5em .5em;
-
+  @include bp($s1) {
+    margin-top: .333em;
+  }
+  @include bp($s2) {
+    margin-top: .5em;
+  }
 }
