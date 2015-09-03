@@ -98,14 +98,14 @@ $.localScroll({
 $(document).ready(function() {
  
   $("#owl-home").owlCarousel({
-      autoPlay : 3000,
+      autoPlay : 4000,
       stopOnHover : true,
       navigation : false, // Show next and prev buttons
       slideSpeed : 300,
-      paginationSpeed : 400,
+      paginationSpeed : 1200,
       singleItem:true,
       //autoHeight : true,
-      //transitionStyle:"fade"
+      transitionStyle:"fade"
  
       // "singleItem:true" is a shortcut for:
       // items : 1, 
@@ -113,7 +113,6 @@ $(document).ready(function() {
       // itemsDesktopSmall : false,
       // itemsTablet: false,
       // itemsMobile : false
- 
-  });
+});
  
 });

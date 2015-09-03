@@ -173,7 +173,7 @@ input[type="checkbox"]#navtoggle {
 			display: inline-block;
 			text-align: center;
 			text-transform: uppercase;
-			border-top: 2px solid transparent;
+			
 			padding:0.333em 0;
 			&:hover, &:focus {
 				color:$green;
@@ -183,6 +183,7 @@ input[type="checkbox"]#navtoggle {
 			
 			@include bp($s2){
 				//font-size: .875em;
+				border-top: 2px solid transparent;
 			}
 
 			@include bp($s3){
@@ -419,6 +420,9 @@ a[rel="next"], a[rel="prev"] {
 .pnav__item__subtitle {
 	display: block;
 	margin:0 .5em 0;
+	overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .pnav__imgdivider {

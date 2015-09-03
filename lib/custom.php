@@ -93,51 +93,51 @@ function bv_metaboxes( array $meta_boxes ) {
         )
     ) 
   );
-    $meta_boxes['home'] = array(
-        'id'         => 'homemeta',
-        'title'      => 'Slide Show',
-        'object_types'  => array( 'page'),
-        'show_on'      => array( 'key' => 'page-template', 'value' => 'template-home.php' ),
-        'context'    => 'normal',
-        'priority'   => 'high',
-        'show_names' => true,
-        'fields'     => array (
-                array (
-                    'id' => 'slides',
-                    'type' => 'group',
-                    'description' => 'Slide show',
-                    'options'     => array (
-                        'group_title'   => 'Slide {#}', 
-                        'add_button'    => 'Új Slide',
-                        'remove_button' => 'Slide törlése',
-                        'sortable'      => true, // beta
-                    ),
-                    'fields'     => array(
-                        array (
-                            'name' => 'Cím',
-                            'id'   => 'title',
-                            'type' => 'text_medium',
-                        ),
-                        array (
-                            'name' => 'Bekezdés',
-                            'id'   => 'paragpraph',
-                            'type' => 'text_medium',
-                        ),
-                        array (
-                            'name' => 'Tovább link',
-                            'id'   => 'link',
-                            'type' => 'text_url',
-                        ),
+    // $meta_boxes['home'] = array(
+    //     'id'         => 'homemeta',
+    //     'title'      => 'Slide Show',
+    //     'object_types'  => array( 'page'),
+    //     'show_on'      => array( 'key' => 'page-template', 'value' => 'template-home.php' ),
+    //     'context'    => 'normal',
+    //     'priority'   => 'high',
+    //     'show_names' => true,
+    //     'fields'     => array (
+    //             array (
+    //                 'id' => 'slides',
+    //                 'type' => 'group',
+    //                 'description' => 'Slide show',
+    //                 'options'     => array (
+    //                     'group_title'   => 'Slide {#}', 
+    //                     'add_button'    => 'Új Slide',
+    //                     'remove_button' => 'Slide törlése',
+    //                     'sortable'      => true, // beta
+    //                 ),
+    //                 'fields'     => array(
+    //                     array (
+    //                         'name' => 'Cím',
+    //                         'id'   => 'title',
+    //                         'type' => 'text_medium',
+    //                     ),
+    //                     array (
+    //                         'name' => 'Bekezdés',
+    //                         'id'   => 'paragpraph',
+    //                         'type' => 'text_medium',
+    //                     ),
+    //                     array (
+    //                         'name' => 'Tovább link',
+    //                         'id'   => 'link',
+    //                         'type' => 'text_url',
+    //                     ),
 
-                        array (
-                            'name' => 'Kép',
-                            'id'   => 'photo',
-                            'type' => 'file',
-                        ),
-                ) // end of fields
-            )
-        ) 
-    );
+    //                     array (
+    //                         'name' => 'Kép',
+    //                         'id'   => 'photo',
+    //                         'type' => 'file',
+    //                     ),
+    //             ) // end of fields
+    //         )
+    //     ) 
+    // );
 
     $meta_boxes['page'] = array(
     'id'         => 'meta',
@@ -151,7 +151,32 @@ function bv_metaboxes( array $meta_boxes ) {
         array (
             'name' => 'Alcím',
             'id'   => 'subtitle',
-            'type' => 'text_medium',
+            'type' => 'textarea_code',
+        ),
+
+      )
+    );
+
+    $meta_boxes['product'] = array(
+    'id'         => 'prodmeta',
+    'title'      => 'Termék részletek',
+    'object_types'  => array('product'), // Post type
+    //'show_on'      => array( 'key' => 'page-template', 'value' => 'template-download.php' ),
+    'context'    => 'normal',
+    'priority'   => 'high',
+    'show_names' => true, // Show field names on the left
+    'fields'     => array (
+        array (
+            'name'    => 'Felhasználás',
+            'id'      => 'felh',
+            'type'    => 'wysiwyg',
+            'options' => array(),
+        ),
+        array (
+            'name'    => 'Árak',
+            'id'      => 'arak',
+            'type'    => 'wysiwyg',
+            'options' => array(),
         ),
 
       )

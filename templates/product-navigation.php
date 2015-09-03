@@ -29,7 +29,7 @@
             </figure>
           <?php endif ?>
           <h3 class="pnav__item__title"><?php the_title(); ?>&nbsp;<i class="ion ion-chevron-down"></i></h3>
-          <span class="pnav__item__subtitle">Lorep <strong>Biovéd</strong> dolor sit amet</span>
+          <span class="pnav__item__subtitle"><?= get_post_meta( $post->ID, 'subtitle' , true ); ?></span>
         </a>
       <?php endwhile; ?>
     </div>
